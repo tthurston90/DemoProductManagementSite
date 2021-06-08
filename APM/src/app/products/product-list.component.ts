@@ -4,7 +4,6 @@ import { IProduct } from "./product";
 import { ProductSerivce } from "./product.service";
 
 @Component({
-    selector: 'pm-products',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css']
 })
@@ -24,7 +23,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
     }
     set listFilter(value: string) {
       this._listFilter = value;
-      console.log('In Setter: ', value);
       this.filteredProducts = this.performFilter(value);
     }
 
